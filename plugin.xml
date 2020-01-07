@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension point="org.eclipse.ui.menus">
+        <menuContribution locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+        <menu
+        	id="com.axiomatics.asm"
+        	label="Axiomatics Server Manager - 6.2">
+             <menu
+            	id="com.axiomatics.policymanagement"
+            	label="Policy Management">
+            	<command commandId="com.axiomatics.plugin.uploadpolicy.policy62"
+                	label="Upload Policies" style="push">
+            	</command>
+            	<command commandId="com.axiomatics.plugin.downloadpolicy.policy62"
+                	label="Download Policies" style="push">
+            	</command>
+	         </menu>
+            <menu
+            	id="com.axiomatics.attributemanagement"
+            	label="Attribute Management">
+            	<command commandId="com.axiomatics.plugin.uploadattribute.attribute62"
+                	label="Upload Attributes into ASM Dictionary" style="push">
+            	</command>
+            	<command commandId="com.axiomatics.plugin.downloadattribute.attribute62"
+                	label="Download Dictionary Attributes from ASM" style="push">
+            	</command>
+	            <command commandId="com.axiomatics.plugin.converter.xml.alfa"
+	                label="Translate XML Attributes Dictionary to ALFA">
+	            </command>
+	            <command commandId="com.axiomatics.plugin.converter.alfa.xml"
+	                label="Translate ALFA Attributes to XML" style="push">
+	            </command>
+	         </menu>
+        </menu>
+        </menuContribution>
+    </extension>
+    <extension point="org.eclipse.ui.commands">
+        <command defaultHandler="com.axiomatics.plugin.policy.handler.UploadPolicyHandler62"
+            id="com.axiomatics.plugin.uploadpolicy.policy62" name="Policy62">
+        </command>
+        <command defaultHandler="com.axiomatics.plugin.policy.handler.DownloadPolicyHandler62"
+            id="com.axiomatics.plugin.downloadpolicy.policy62" name="Policy62">
+        </command>
+        <command defaultHandler="com.axiomatics.plugin.attribute.handler.DownloadAttributeHandler62"
+            id="com.axiomatics.plugin.downloadattribute.attribute62" name="Attribute62">
+        </command>
+        <command defaultHandler="com.axiomatics.plugin.attribute.handler.UploadAttributeHandler62"
+            id="com.axiomatics.plugin.uploadattribute.attribute62" name="Attribute62">
+        </command>
+        <command defaultHandler="com.axiomatics.plugin.converter.handler.XMLtoALFA"
+            id="com.axiomatics.plugin.converter.xml.alfa" name="xml-alfa">
+        </command>
+        <command defaultHandler="com.axiomatics.plugin.converter.handler.ALFAtoXML"
+            id="com.axiomatics.plugin.converter.alfa.xml" name="alfa-xml">
+        </command>
+    </extension>
+</plugin>
