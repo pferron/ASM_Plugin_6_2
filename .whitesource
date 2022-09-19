@@ -4,6 +4,7 @@
     "configExternalURL": "",
     "projectToken": "",
     "enableLicenseViolations": true,
+    "checkPolicies": true,
     "baseBranches": ["master","test-branch"]
   },
   "checkRunSettings": {
