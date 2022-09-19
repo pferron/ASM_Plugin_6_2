@@ -3,8 +3,8 @@
     "configMode": "AUTO",
     "configExternalURL": "",
     "projectToken": "",
-    "baseBranches": ["master","test-branch"],
-    "enableLicenseViolations": true
+    "enableLicenseViolations": true,
+    "baseBranches": ["master","test-branch"]
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
@@ -12,6 +12,7 @@
   },
   "issueSettings": {
     "minSeverityLevel": "LOW",
+    "displayLicenseViolations": true,
     "issueType": "DEPENDENCY"
   },
   "remediateSettings": {
